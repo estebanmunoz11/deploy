@@ -7,8 +7,9 @@ RUN apt-get update && apt-get install -y python3  python3-pip wget
 # Establecemos el directorio de trabajo
 WORKDIR /app
 
-#Descaragr
-RUN wget -O /app/get_bitcoin.py https://hub.docker.com/r/fenix11/bitcoint_price_app.py
+#Descargar
+RUN wget -O /app/get_bitcoin_price.py  https://github.com/estebanmunoz11/bitcoinapp/blob/main/get_bitcoin_price.py
+#RUN wget -O /app/get_bitcoin.py https://hub.docker.com/r/fenix11/bitcoint_price_app.py
 
 
 # Instalamos la biblioteca requests
@@ -23,7 +24,7 @@ RUN pip3 install requests
 #CMD ["comando_para_iniciar_servicio"]
 
 # Ejecutamos el script de Python al iniciar el contenedor
-CMD ["python3", "./get_bitcoin.py"]
+CMD ["python3", "./get_bitcoin_price.py"]
 
 
 # Etiqueta la imagen con un esquema de versionado
