@@ -16,7 +16,7 @@ RUN wget -O /app/get_bitcoin_price.py  https://github.com/estebanmunoz11/bitcoin
 RUN pip3 install requests
 
 # Copiamos un script de Python al contenedor
-#COPY get_bitcoin_price.py /app/get_bitcoin_price.py
+COPY get_bitcoin_price.py /app/get_bitcoin_price.py
 
 
 # Configura y expone un servicio
