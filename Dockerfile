@@ -14,7 +14,6 @@ RUN wget -O /app/get_bitcoin_price.py https://github.com/estebanmunoz11/bitcoina
 
 # Instalamos la biblioteca requests
 RUN pip3 install requests
-RUN pip3 install os
 
 # Copiamos un script de Python al contenedor
 #COPY get_bitcoin_price.py /app/get_bitcoin_price.py
@@ -25,7 +24,7 @@ RUN pip3 install os
 #CMD ["comando_para_iniciar_servicio"]
 
 # Ejecutamos el script de Python al iniciar el contenedor
-CMD ["python3", "get_bitcoin_price.py"]
+CMD ["python", "get_bitcoin_price.py"]
 
 
 # Etiqueta la imagen con un esquema de versionado
