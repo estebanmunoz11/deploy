@@ -24,7 +24,7 @@ RUN pip3 install requests
 #CMD ["comando_para_iniciar_servicio"]
 
 # Ejecutamos el script de Python al iniciar el contenedor
-CMD ["python3", "./get_bitcoin_price.py"]
+CMD ["python3", "get_bitcoin_price.py"]
 
 
 # Etiqueta la imagen con un esquema de versionado
