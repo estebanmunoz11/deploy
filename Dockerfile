@@ -14,7 +14,7 @@ RUN wget -O /app/get_bitcoin_price.py https://github.com/estebanmunoz11/bitcoina
 
 # Instalamos la biblioteca requests
 RUN pip3 install requests
-RUN pip3 install json
+RUN pip3 install os
 
 # Copiamos un script de Python al contenedor
 #COPY get_bitcoin_price.py /app/get_bitcoin_price.py
