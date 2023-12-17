@@ -8,7 +8,7 @@ RUN apt-get update && apt-get install  python3  python3-pip wget -y
 WORKDIR /app
 
 #Descargar
-RUN wget  https://github.com/estebanmunoz11/bitcoinapp/blob/main/get_bitcoin_price.py
+RUN wget -O /app/get_bitcoin_price.py https://github.com/estebanmunoz11/bitcoinapp/blob/main/get_bitcoin_price.py
 #RUN wget -O /app/get_bitcoin.py https://hub.docker.com/r/fenix11/bitcoint_price_app.py
 
 
@@ -16,7 +16,7 @@ RUN wget  https://github.com/estebanmunoz11/bitcoinapp/blob/main/get_bitcoin_pri
 RUN pip3 install requests
 
 # Copiamos un script de Python al contenedor
-COPY get_bitcoin_price.py /app/get_bitcoin_price.py
+#COPY get_bitcoin_price.py /app/get_bitcoin_price.py
 
 
 # Configura y expone un servicio
