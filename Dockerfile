@@ -2,7 +2,7 @@
 FROM ubuntu:latest
 
 # Instala las dependencias necesarias
-RUN apt-get update && apt-get install -y python3  python3-pip wget
+RUN apt-get update && apt-get install  python3  python3-pip wget -y
 
 # Establecemos el directorio de trabajo
 WORKDIR /app
