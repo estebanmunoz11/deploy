@@ -8,7 +8,7 @@ RUN apt-get update && apt-get install -y python3  python3-pip wget
 WORKDIR /app
 
 #Descaragr
-RUN wget -O /app/get_bitcoin.py https://hub.docker.com/r/fenix11/bitcoint_price_app.py
+RUN wget -O /app/get_bitcoin.py https://hub.docker.com/r/fenix11/bitcoint_price_app
 
 
 # Instalamos la biblioteca requests
